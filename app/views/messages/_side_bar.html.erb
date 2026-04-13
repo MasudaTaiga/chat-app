@@ -1,7 +1,18 @@
 <div class="side_bar-header">
+  <div class="side_bar-user_name">
+    （ユーザー名）
+  </div>
+  <div class="header-button">
+    チャットを作成する
+  </div>
 
 </div>
 
+<% rooms = ["techroom1", "techroom2", "techroom3", "techroom4", "techroom5", "techroom6", "techroom7"]%>
 <div class="side_bar-main">
-  
+  <% rooms.each do |room| %>
+    <div class="room_box">
+      <%= room%>
+    </div>
+  <% end %>
 </div>

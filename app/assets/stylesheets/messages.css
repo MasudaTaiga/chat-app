@@ -14,13 +14,40 @@
   height: 100px;
   background-color: #253141;
   padding: 0px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.side_bar-user_name{
+  color: #FAFAFA;
+  font-size: 16px;
+}
+
+.header-button{
+  border: 1px solid lightblue;
+  font-size: 10px;
+  color: deepskyblue;
+  padding: 14px 14px;
 }
 
 .side_bar-main{
   height: calc(100vh - 100px);
   background-color: #2F3E51;
   padding: 0px 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
 }
+
+.room_box{
+  padding-top: 20px;
+  padding-bottom: 40px;
+  color: white;
+}
+
+
+
 
 .main_chat{
   width: calc(100vw - 300px);
