@@ -1,7 +1,5 @@
 <div class="side_bar-header">
-  <div class="side_bar-user_name">
-    （ユーザー名）
-  </div>
+  <%= link_to current_user.name, edit_user_path(current_user), class: "side_bar-user_name"%>
   <div class="header-button">
     チャットを作成する
   </div>
