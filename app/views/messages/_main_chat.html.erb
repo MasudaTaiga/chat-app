@@ -1,0 +1,46 @@
+<div class="main_chat-header">
+  <div class = "main_chat-header_left">
+    <div class="chatroom_name">
+      hogefuga
+    </div>
+  </div>
+  <div class = "main_chat-header_right">
+    <a href="hogehoge", class="main_chat-header_button">
+      チャットを終了する
+    </a>
+  </div>
+</div>
+
+
+<%# サンプルデータ  キーとかも実際には異なります%>
+<%samples = [{user:"Tom", date:"2020/3/31(wed) 12:43:30", message:"おはよう"},{user:"Taiga", date:"2020/3/31(wed) 12:44:30", message:"こんにちは"},{user:"Tom", date:"2020/3/31(wed) 12:43:30", message:"おはよう"},{user:"Taiga", date:"2020/3/31(wed) 12:44:30", message:"こんにちは"},{user:"Tom", date:"2020/3/31(wed) 12:43:30", message:"おはよう"},{user:"Taiga", date:"2020/3/31(wed) 12:44:30", message:"こんにちは"}]%>
+
+
+<div class="main_chat-main">
+  <% samples.each do |sample| %>
+    <div class="message_box">
+      <div class="message_box_top">
+        <div class="massage_name">
+          <%=sample[:user]%>
+        </div>
+        <div class="massage_date">
+          <%=sample[:date]%>
+        </div>
+      </div>
+      <div class="message_text">
+        <%=sample[:message]%>
+      </div>
+    </div> 
+  <% end %>
+</div>
+
+<div class="main_chat-form">
+  <%= form_with(model: @message, class: "contents__form") do |form| %>
+    <div class="form_input"> <%= form.text_field :message, placeholder: "type a message", class: "form_text" %>
+      <label class="form_image"> <span class="image-file">画像</span>
+        <input type="file" class="hidden">
+      </label>
+    </div>
+    <%= form.submit "送信", class: "form_submit" %>
+  <% end %>
+</div>
