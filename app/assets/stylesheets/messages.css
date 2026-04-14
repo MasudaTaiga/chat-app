@@ -30,6 +30,7 @@
   font-size: 10px;
   color: deepskyblue;
   padding: 14px 14px;
+  text-decoration: none;
 }
 
 .side_bar-main{
@@ -64,6 +65,7 @@
 }
 
 .main_chat-header_left{
+  
 }
 
 .chatroom_name{
